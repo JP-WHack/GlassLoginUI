@@ -1,58 +1,62 @@
-# 透明UI - カメラ背景ログインアプリ
+<div align="center">
 
-**SwiftUIで実装された革新的な透明カメラUIログインシステム**
+# 透明 UI - カメラ背景ログインアプリ
 
-![Swift](https://img.shields.io/badge/Swift-5.0+-orange.svg)
-![Platform](https://img.shields.io/badge/platform-iOS%2014.0+-lightgrey.svg)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-2.0+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+**SwiftUI で実装された革新的な透明カメラ UI ログインシステム**
 
----
+![Swift](https://img.shields.io/badge/Swift-5.0+-FA7343?style=for-the-badge&logo=swift&logoColor=white)
+![SwiftUI](https://img.shields.io/badge/SwiftUI-2.0+-0D1117?style=for-the-badge&logo=swift&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-14.0+-000000?style=for-the-badge&logo=apple&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-3DA639?style=for-the-badge)
 
-## 概要
-
-リアルタイムカメラプレビューを背景に使用した、独創的な透明UIログイン画面アプリケーションです。ぼかし効果を加えたカメラ映像がUI要素の背景として表示され、モダンで洗練されたユーザー体験を提供します。
-
-SwiftUIとAVFoundationを組み合わせることで、従来にない視覚的に魅力的なログインインターフェースを実現しています。
+</div>
 
 ---
 
-## 主な機能
+## 📖 概要
+
+リアルタイムカメラプレビューを背景に使用した、独創的な透明 UI ログイン画面アプリケーションです。ぼかし効果を加えたカメラ映像が UI 要素の背景として表示され、モダンで洗練されたユーザー体験を提供します。
+
+SwiftUI と AVFoundation を組み合わせることで、従来にない視覚的に魅力的なログインインターフェースを実現しています。
+
+---
+
+## ✨ 主な機能
 
 * **リアルタイムカメラプレビュー** - 背景に端末のカメラ映像を表示
 * **ぼかし効果** - カメラ映像に美しいブラー効果を適用
-* **透明UI要素** - テキストやボタンが透明で、背景のカメラ映像が透けて見える
-* **マスク技術** - SwiftUIのマスク機能を使用した高度なレイアウト
-* **カメラ権限管理** - AVFoundationによる適切な権限処理
+* **透明 UI 要素** - テキストやボタンが透明で、背景のカメラ映像が透けて見える
+* **マスク技術** - SwiftUI のマスク機能を使用した高度なレイアウト
+* **カメラ権限管理** - AVFoundation による適切な権限処理
 * **レスポンシブデザイン** - 様々な画面サイズに対応
 
 ---
 
-## 技術仕様
+## 🛠️ 技術仕様
 
 | 項目 | 詳細 |
 |------|------|
-| 言語 | Swift 5.0以上 |
+| 言語 | Swift 5.0 以上 |
 | フレームワーク | SwiftUI, AVFoundation, Combine |
-| 最小対応OS | iOS 14.0以上 |
-| カメラ | AVCaptureSession使用 |
-| アーキテクチャ | MVVM (StateObject使用) |
-| UI技術 | マスク、ぼかし効果、ZStack |
+| 最小対応 OS | iOS 14.0 以上 |
+| カメラ | AVCaptureSession 使用 |
+| アーキテクチャ | MVVM (StateObject 使用) |
+| UI 技術 | マスク、ぼかし効果、ZStack |
 
 ---
 
-## システム要件
+## 📋 システム要件
 
-* **Xcode**: 12.0以上
-* **iOS**: 14.0以上
-* **デバイス**: カメラ搭載のiPhone/iPad（シミュレーターではカメラプレビューは表示されません）
+* **Xcode**: 12.0 以上
+* **iOS**: 14.0 以上
+* **デバイス**: カメラ搭載の iPhone/iPad（シミュレーターではカメラプレビューは表示されません）
 * **権限**: カメラアクセス許可が必要
 
 ---
 
-## インストール
+## 📥 インストール
 
-### Xcodeプロジェクトとして実行
+### Xcode プロジェクトとして実行
 
 1. リポジトリをクローン:
 
@@ -61,7 +65,7 @@ git clone [your-repository-url]
 cd 透明UI
 ```
 
-2. Xcodeでプロジェクトを開く:
+2. Xcode でプロジェクトを開く:
 
 ```bash
 open 透明UI.xcodeproj
@@ -71,7 +75,7 @@ open 透明UI.xcodeproj
 
 ---
 
-## 使用方法
+## 💻 使用方法
 
 ### 初回起動時
 
@@ -83,14 +87,12 @@ open 透明UI.xcodeproj
 
 * **アカウント名入力**: 上部のテキストフィールドにユーザー名を入力
 * **パスワード入力**: 下部のセキュアフィールドにパスワードを入力
-* **ログインボタン**: LOGINボタンをタップしてログイン
+* **ログインボタン**: LOGIN ボタンをタップしてログイン
 * **ソーシャルログイン**: 画面下部の4つのアイコンから選択可能
 
 ---
 
-## コードの仕組み
-
-### アーキテクチャ
+## 🏗️ アーキテクチャ
 
 ```
 ContentView (メインビュー)
@@ -110,7 +112,7 @@ ContentView (メインビュー)
 
 1. **背景レイヤー**: 完全な黒色
 2. **カメラプレビューレイヤー**: ぼかし効果付きカメラ映像（マスクで制限）
-3. **UIレイヤー**: 透明なテキストフィールドとボタン
+3. **UI レイヤー**: 透明なテキストフィールドとボタン
 
 ### 主要コンポーネント
 
@@ -143,7 +145,7 @@ struct TransparentTextField: View {
 
 ---
 
-## カスタマイズ方法
+## ⚙️ カスタマイズ
 
 ### ぼかし効果の強度変更
 
@@ -152,7 +154,7 @@ CameraPreview(session: cameraManager.session)
     .blur(radius: 20)  // 数値を変更（0-100推奨）
 ```
 
-### UI要素の色調整
+### UI 要素の色調整
 
 ```swift
 .foregroundColor(.clear)  // 完全透明
@@ -178,11 +180,11 @@ guard let device = AVCaptureDevice.default(.builtInWideAngleCamera,
 
 ---
 
-## 実装の詳細
+## 🧩 実装の詳細
 
 ### マスク技術の活用
 
-このアプリの核心は、SwiftUIの`.mask()`モディファイアを使用して、カメラプレビューを特定のUI要素の形状に切り抜く技術です：
+このアプリの核心は、SwiftUI の `.mask()` モディファイアを使用して、カメラプレビューを特定の UI 要素の形状に切り抜く技術です：
 
 ```swift
 CameraPreview(session: cameraManager.session)
@@ -195,20 +197,21 @@ CameraPreview(session: cameraManager.session)
 
 ### 二重レイヤー構造
 
-1. **カメラレイヤー（マスク適用）**: UI要素の形状でカメラ映像を切り抜き
-2. **透明UIレイヤー**: 実際に操作可能な透明なUI要素
+1. **カメラレイヤー（マスク適用）**: UI 要素の形状でカメラ映像を切り抜き
+2. **透明 UI レイヤー**: 実際に操作可能な透明な UI 要素
 
-これにより、UI要素の背景だけがカメラ映像になり、操作性を保ちながら視覚効果を実現しています。
+これにより、UI 要素の背景だけがカメラ映像になり、操作性を保ちながら視覚効果を実現しています。
 
 ---
 
-## トラブルシューティング
+## 🔍 トラブルシューティング
 
 ### カメラが表示されない
 
 **原因**: カメラ権限が許可されていない
 
 **解決策**:
+
 ```
 1. 設定アプリを開く
 2. アプリ一覧から「透明UI」を選択
@@ -224,9 +227,10 @@ CameraPreview(session: cameraManager.session)
 
 ### ビルドエラーが発生する
 
-**原因**: iOS バージョンまたはXcodeバージョンの不一致
+**原因**: iOS バージョンまたは Xcode バージョンの不一致
 
 **解決策**:
+
 ```swift
 // プロジェクト設定でDeployment Targetを確認
 iOS Deployment Target: 14.0以上
@@ -237,13 +241,14 @@ iOS Deployment Target: 14.0以上
 **原因**: セッションプリセットが高すぎる
 
 **解決策**:
+
 ```swift
 session.sessionPreset = .medium  // .highから.mediumに変更
 ```
 
 ---
 
-## パフォーマンス最適化
+## 📊 パフォーマンス最適化
 
 ### カメラセッションの最適化
 
@@ -265,19 +270,19 @@ AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
 
 ---
 
-## 応用例
+## 🧭 応用例
 
 このテクニックは様々な用途に応用できます：
 
-* **ARフィルターアプリ**: カメラ映像にリアルタイムエフェクト
+* **AR フィルターアプリ**: カメラ映像にリアルタイムエフェクト
 * **仮想試着アプリ**: 商品プレビューの背景として
-* **クリエイティブエディター**: 独自のUIデザイン
+* **クリエイティブエディター**: 独自の UI デザイン
 * **セキュリティアプリ**: 生体認証と組み合わせたログイン
 * **教育アプリ**: 拡張現実を使った学習体験
 
 ---
 
-## Info.plist設定
+## 📝 Info.plist 設定
 
 カメラを使用するため、以下のプライバシー設定が必要です：
 
@@ -286,7 +291,8 @@ AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
 <string>ログイン画面の背景にカメラプレビューを表示するために使用します</string>
 ```
 
-Xcodeの場合:
+Xcode の場合:
+
 ```
 1. Info.plistを開く
 2. 「+」ボタンをクリック
@@ -296,21 +302,21 @@ Xcodeの場合:
 
 ---
 
-## セキュリティに関する注意事項
+## 🔒 セキュリティに関する注意事項
 
 このアプリはデモンストレーション用です。実際のプロダクションで使用する場合：
 
-* **通信の暗号化**: HTTPSを使用してログイン情報を送信
-* **認証トークン**: JWTなど安全な認証方式を実装
+* **通信の暗号化**: HTTPS を使用してログイン情報を送信
+* **認証トークン**: JWT など安全な認証方式を実装
 * **入力検証**: SQL インジェクション等の対策を実施
 * **カメラ映像の保存禁止**: プライバシー保護のため映像は保存しない
-* **生体認証の追加**: Face ID/Touch IDの統合を検討
+* **生体認証の追加**: Face ID/Touch ID の統合を検討
 
 ---
 
-## ライセンス
+## 📄 ライセンス
 
-MITライセンスの下で公開されています。
+MIT ライセンスの下で公開されています。
 
 ```
 MIT License
@@ -324,9 +330,9 @@ in the Software without restriction...
 
 ---
 
-## 貢献
+## 🤝 貢献
 
-プルリクエストを歓迎します。大きな変更の場合は、まずissueを開いて変更内容を議論してください。
+プルリクエストを歓迎します。大きな変更の場合は、まず issue を開いて変更内容を議論してください。
 
 1. プロジェクトをフォーク
 2. フィーチャーブランチを作成 (`git checkout -b feature/AmazingFeature`)
@@ -336,7 +342,7 @@ in the Software without restriction...
 
 ---
 
-## 参考資料
+## 📚 参考資料
 
 * [SwiftUI Documentation](https://developer.apple.com/documentation/swiftui/)
 * [AVFoundation Programming Guide](https://developer.apple.com/av-foundation/)
@@ -345,28 +351,38 @@ in the Software without restriction...
 
 ---
 
-## 作者
+## 👤 作者
 
 **JP-WHack** - 初期作成 - 2025/12/18
 
 ---
 
-## 謝辞
+## 🙏 謝辞
 
-* SwiftUIコミュニティの皆様
+* SwiftUI コミュニティの皆様
 * Apple Developer Forums
-* Stack Overflowの貢献者の方々
+* Stack Overflow の貢献者の方々
 
 ---
 
-## バージョン履歴
+## 🗒️ バージョン履歴
 
 * **1.0.0** (2025-12-18)
     * 初回リリース
     * カメラプレビュー背景機能
-    * 透明UI要素実装
+    * 透明 UI 要素実装
     * ログイン画面デザイン完成
 
 ---
 
-*SwiftUIで創る、次世代のUIエクスペリエンス*
+## ⚠️ 免責事項
+
+本ソフトウェアは教育・デモンストレーション目的で提供されています。ユーザーは、使用が適用される法律および規制に準拠していることを確保する責任を負います。
+
+---
+
+<div align="center">
+
+*SwiftUI で創る、次世代の UI エクスペリエンス*
+
+</div>
